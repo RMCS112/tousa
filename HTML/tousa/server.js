@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const mysql2 = require('mysql2')
 const app = express()
-Y
+
 //Create a Database Connection
 console.log('check1')  
 var con = mysql2.createConnection({
