@@ -64,7 +64,7 @@ app.post('/book', (req,res) => {
     
 })
 
-port=process.env.port || 8080
+port=process.env.PORT || 3000
 app.listen(port, () => {
     console.log('Server is listening on port '+port)
     console.log(__dirname + '<-- dirname')
