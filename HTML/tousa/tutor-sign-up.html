@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about the USA high school system in your language"
+    />
+    <title>To USA - Tutor Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="headerTab">
+      <a id="home" href="index.html"><em>Brazil to USA</em></a>
+      <div id="navigation">
+        <a href="content.html">content</a>
+        <a href="tutoring.html">tutoring</a>
+        <a href="aboutus.html">about us</a>
+      </div>
+      <div id="translate">
+        <img class="flag" src="usaflag.jpg" alt="English" />
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+
+        <img class="flag" src="brazilflag.png" alt="Portuguese" />
+      </div>
+    </header>
+    <form method="post" class="main" id="signup" action="/signup">
+      <input type="email" placeholder="abc@def.com" name="email" required />
+      <div class="subjectList">
+        <input type="checkbox" />
+        <label>Do you speak Portuguese and English?</label>
+        <label class="gridHeading">Area</label>
+        <input type="checkbox" id="mathCheck" />
+        <label>Math</label>
+        <input type="checkbox" id="scienceCheck" />
+        <label>Science</label>
+      </div>
+
+      <ul class="subjectList" id="mathSubject">
+        <li class="gridHeading">Subjects you are comfortable tutoring</li>
+        <input type="checkbox" name="algebra1" />
+        <li>Algebra 1</li>
+        <input type="checkbox" name="geometry" />
+        <li>Geometry</li>
+        <input type="checkbox" name="algebra2" />
+        <li>Algebra 2</li>
+        <input type="checkbox" name="precalculus" />
+        <li>Pre-Calculus</li>
+        <input type="checkbox" name="calculus" />
+        <li>Calculus AB</li>
+      </ul>
+      <ul class="subjectList" id="scienceSubject">
+        <li class="gridHeading">Subjects you are comfortable tutoring</li>
+        <input type="checkbox" name="environmental" />
+        <li>Environmental Science</li>
+        <input type="checkbox" name="biology" />
+        <li>Biology</li>
+        <input type="checkbox" name="chemistry" />
+        <li>Chemistry</li>
+        <input type="checkbox" name="physics1" />
+        <li>Physics 1</li>
+        <input type="checkbox" name="physicsc1" />
+        <li>AP Physics C: Mechanics</li>
+        <input type="checkbox" name="physicsc2" />
+        <li>AP Physics C: Electricity and Magnetism</li>
+        <input type="checkbox" name="apbiology" />
+        <li>AP Biology</li>
+        <input type="checkbox" name="apchemistry" />
+        <li>AP Chemistry</li>
+      </ul>
+      <div class="flexStart">
+        <input type="checkbox" required />
+        <label class="overflow">
+          I am available for an interview on zoom, which will be arranged
+          through my email.
+        </label>
+      </div>
+
+      <input type="submit" />
+    </form>
+    <script type="module" src="tutorForm.js"></script>
+  </body>
+</html>

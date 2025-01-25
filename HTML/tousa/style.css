@@ -1,0 +1,403 @@
+@font-face {
+  font-family: ccmat;
+  src: url(cocomat-font.ttf);
+}
+@font-face {
+  font-family: ccmat-bold;
+  src: url(Cocomat-Bold.ttf);
+}
+@font-face {
+  font-family: touche-bold;
+  src: url(touche-bold-font.otf);
+}
+@font-face {
+  font-family: touche-light;
+  src: url(touche-light-font.otf);
+}
+@font-face {
+  font-family: touche-sbold;
+  src: url(touche-semibold-font.otf);
+}
+
+em {
+    font-style: normal;
+    font-size: 3em;
+    font-weight: 900;
+  }
+  p {
+    font-family: ccmat;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  label {
+    font-family: ccmat;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  a{
+    font-family: ccmat;
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: none;
+    color: grey;
+  }
+h1 {
+  font-family: touche-bold;
+  font-size: xx-large;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  font-family: touche-light;
+  font-size: 2vh;
+  padding: 2%;
+}
+.listTitle {
+  display: block;
+  padding-bottom:10%;
+  width: fit-content;
+  font-size: 4vh;
+  font-family: ccmat-bold;
+}
+
+  #home{
+    color: black;
+    font-family: ccmat-bold;
+    font-size: 1em;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .headerTab {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-bottom: 1.5px lightgrey solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    z-index: 1;
+  }
+  #navigation{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: flex-start;
+    width: 50%;
+    border-left: 1.5px solid lightgrey;
+    border-right: 1.5px solid lightgrey;
+  }
+  .flag {
+    height: 25%;
+  }
+  img{
+    border: 1px,solid,lightgrey
+  }
+
+ #translate{
+  display: flex;
+  width:10%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-right: 2%;
+ }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    height: 15px;
+    width:25px;
+  }
+
+  /* Translation Slider */
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    border-radius: 15%
+  }
+  
+  .slider::before {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 11px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 15%
+  }
+  
+  #translate input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  
+  #translate input:checked + .slider::before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+/* Tutoring Page */  
+
+.tutoringGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.7fr 1fr;
+}
+
+.tutoringBox {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 10%;
+margin: 4%;
+border-radius: 3rem;
+height: 70%;
+position: relative;
+background-color: #1c1f2c;
+color: white;
+}
+.tutoringBox::after {
+  content: '';
+  position:absolute;
+  height: 105%;
+  width: 105%;
+  border-radius: 3.3rem;
+  background-image: linear-gradient(to bottom right, lightgreen, yellow);
+  top: -2.5%;
+  left: -2.5%;
+  z-index: -1;
+}
+.tutoringBox ul {
+  list-style-type: disc;
+  margin-top: 0;
+}
+.tutoringBox li::marker{
+  font-size: x-large;
+}
+#signUpBox {
+  height: fit-content;
+}
+.buttonLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 35%;
+  border-radius: 1000px;
+  padding: 5%;
+}
+.buttonLink:is(a) {
+  font-family: ccmat-bold;
+  color: #1c1f2c;
+}
+.buttonLink a{
+  font-family: ccmat-bold;
+  color: #1c1f2c;
+}
+
+/* Tutor Sign Up / Booking */
+
+
+#signup input:not([type='checkbox']):not([type='submit']) {
+  grid-column: span 2;
+}
+
+  #signup:has(#mathCheck:checked) #mathSubject {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 1.1fr 1fr;
+    height: max-content;
+    width: 100%;
+  }
+
+  #signup:has(#scienceCheck:checked) #scienceSubject {
+    
+    display: grid; 
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 1.1fr 1fr;
+    height: auto;
+    width: 100%;
+  }
+
+  .subjectList {
+    list-style-type:none;
+    display: none;
+    height: 0;
+    width: 0;
+    align-items: center;
+  }
+  .subjectList input {
+    height: 50%;
+  }
+  .subjectList:is(div) {
+    display: grid; 
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 1.1fr 1fr;
+    height: auto;
+    width: 70%;
+    
+  }
+  .flexStart {
+    display: flex;
+    align-items: flex-start;
+  }
+
+
+  .gridHeading {
+    grid-column: span 2;
+    grid-row: span 2;
+    font-family: touche-sbold;
+    font-size: x-large;
+    padding: 1%;
+  }
+
+  .overflow {
+    width: max-content;
+  }
+
+  .flexStart:has(#bookingAcknowledgement) input{
+    margin-top: 2%;
+    margin-right: 3%;
+  }
+
+  /* Content Page */
+  
+  .sidebar {
+    position: fixed;
+    width: 15%;
+    padding: 2%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    top: 15%;
+    left: 0.4%;
+    list-style-type: none;
+    background-color: #fafafa;
+    border-radius: 30px;
+  }
+  .sidebar li a {
+    text-decoration: underline;
+    color: #89f336;
+    font-size: larger;
+  }
+  .sidebar label {
+    font-family: touche-light;
+    color: #858585;
+  }
+  .contentDiv ul{
+list-style-type: disc;
+  }
+  .contentDiv div{
+    background-color: #fafafa;
+    border-radius: 30px;
+    margin: 1%;
+    padding: 6%;
+  }
+  .contentDiv label:not(.listTitle) {
+    font-family: touche-sbold;
+  }
+.contentDiv .listTitle {
+  width: 70%;
+}
+
+  .contentDiv p {
+    font-size: x-large;
+    font-family: touche-light;
+    font-weight: lighter;
+  }
+  .contentDiv .dropdown {
+    float: left;
+    width:5%;
+    padding-top: 0.5%;
+    padding-right: 1%;
+    
+  }
+  .contentDiv .dropdown img {
+    width:90%;
+    cursor: pointer;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    border:0;
+  }
+  .contentDiv .dropdown input {
+    position: absolute;
+    display: none;
+  }
+  .contentDiv .dropdown input:checked~img {
+    
+    transform: rotate(-90deg);
+  }
+  .contentDiv :has(.dropdown input:checked) {
+    height: 4%;
+    overflow: hidden;
+  }
+
+/* About Us */
+
+#aboutus label {
+  padding-bottom: 2%;
+}
+
+#aboutus p {
+  font-family: touche-light;
+  font-weight: normal;
+}
+
+#contact {
+  font-weight: lighter;
+  font-size: x-large;
+}
+
+#email {
+  text-decoration: underline;
+    color: #89f336;
+    font-size: larger;
+    font-family: touche-sbold;
+}
+
+#subject {
+  font-style: italic;
+  font-weight: lighter;
+  font-family: touche-light;
+  font-size: small;
+}

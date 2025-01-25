@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about the USA high school system in your language"
+    />
+    <title>To USA - Tutor Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="headerTab">
+      <a id="home" href="index.html"><em>Brazil to USA</em></a>
+      <div id="navigation">
+        <a href="content">content</a>
+        <a href="tutoring">tutoring</a>
+        <a href="about">about us</a>
+      </div>
+      <div id="translate">
+        <img class="flag" src="usaflag.jpg" alt="English" />
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+
+        <img class="flag" src="brazilflag.png" alt="Portuguese" />
+      </div>
+    </header>
+    <form method="post" class="main" id="signup" action="/book">
+      <input type="email" placeholder="abc@def.com" name="email" required />
+      <div class="subjectList">
+        <label class="gridHeading">Area</label>
+        <input type="checkbox" id="mathCheck" />
+        <label>Math</label>
+        <input type="checkbox" id="scienceCheck" />
+        <label>Science</label>
+      </div>
+
+      <ul class="subjectList" id="mathSubject">
+        <li class="gridHeading">Subject that you need tutoring for</li>
+        <input type="radio" name="subject" value="algebra1" />
+        <li>Algebra 1</li>
+        <input type="radio" name="subject" value="geometry" />
+        <li>Geometry</li>
+        <input type="radio" name="subject" value="algebra2" />
+        <li>Algebra 2</li>
+        <input type="radio" name="subject" value="precalculus" />
+        <li>Pre-Calculus</li>
+        <input type="radio" name="subject" value="calculus" />
+        <li>Calculus AB</li>
+      </ul>
+      <ul class="subjectList" id="scienceSubject">
+        <li class="gridHeading">Subject that you need tutoring for</li>
+        <input type="radio" name="subject" value="environmental" />
+        <li>Environmental Science</li>
+        <input type="radio" name="subject" value="biology" />
+        <li>Biology</li>
+        <input type="radio" name="subject" value="chemistry" />
+        <li>Chemistry</li>
+        <input type="radio" name="subject" value="physics1" />
+        <li>Physics 1</li>
+        <input type="radio" name="subject" value="physicsc1" />
+        <li>AP Physics C: Mechanics</li>
+        <input type="radio" name="subject" value="physicsc2" />
+        <li>AP Physics C: Electricity and Magnetism</li>
+        <input type="radio" name="subject" value="apbiology" />
+        <li>AP Biology</li>
+        <input type="radio" name="subject" value="apchemistry" />
+        <li>AP Chemistry</li>
+      </ul>
+      <div class="flexStart">
+        <input type="checkbox" required />
+        <label id="bookingAcknowledgement">
+          I am available for tutoring on Thursday 4:00pm online (scheduling must
+          be done on Wednesday or prior). I will check my email for information.
+        </label>
+      </div>
+
+      <input type="submit" />
+    </form>
+    <script src="tutorForm.js"></script>
+  </body>
+</html>
