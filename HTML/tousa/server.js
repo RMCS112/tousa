@@ -5,12 +5,7 @@ const app = express()
 
 //Create a Database Connection
 console.log('check1')  
-var con = mysql2.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'tousaMySQLdb24',
-    database:'tousa'
-})
+var con = mysql2.createConnection(process.env.JAWSDB_URL)
     
 con.connect((err) => {
     console.log('check')
