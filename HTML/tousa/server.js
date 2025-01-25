@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const mysql2 = require('mysql2')
 const app = express()
-
+Y
 //Create a Database Connection
 console.log('check1')  
 var con = mysql2.createConnection({
@@ -20,11 +20,6 @@ con.connect((err) => {
     }else{
         console.log("CONNECTION SUCCESSFUL!")
     }
-})
-
-    // Insert data in table
-con.query('insert into tutors(name,paid,subjects,vouched,email) values (${},${},${})', (err, res) =>{
-    return console.log(res)
 })
 
 // Launch server
@@ -50,17 +45,48 @@ app.get('/about', (req,res) => {
 
 app.post('/signup', (req,res) => {
     console.log(Object.keys(req.body))
-    con.query('insert into tutors(subjects,email) values (?,?)',[Object.keys(req.body).slice(1).join(), req.body.email], (err, res) =>{
-        return console.log(err)
-    })
+    if (con.status == 'authenticated') {
+        con.query('insert into tutors(subjects,email) values (?,?)',[Object.keys(req.body).slice(1).join(), req.body.email], (err, res) =>{
+            return console.log(err)
+        })
+    } else {
+        con.connect((err) => {
+            console.log('check')
+            if(err)
+            {
+                console.log('               error               '+err.stack)
+            }else{
+                console.log("       SECONDARY CONNECTION SUCCESSFUL       ")
+                con.query('insert into tutors(subjects,email) values (?,?)',[Object.keys(req.body).slice(1).join(), req.body.email], (err, res) =>{
+                    return console.log(err)
+                })
+            }
+        })
+    }
+    
     
 })
 
 app.post('/book', (req,res) => {
     console.log(Object.keys(req.body))
-    con.query('insert into students(subjects,email) values (?,?)',[req.body.subject, req.body.email], (err, res) =>{
-        return console.log(err)
-    })
+    if (con.status == 'authenticated') {
+        con.query('insert into students(subjects,email) values (?,?)',[req.body.subject, req.body.email], (err, res) =>{
+            return console.log(err)
+        })
+    } else {
+        con.connect((err) => {
+            console.log('check')
+            if(err)
+            {
+                console.log('               error               '+err.stack)
+            }else{
+                console.log("       SECONDARY CONNECTION SUCCESSFUL       ")
+                con.query('insert into students(subjects,email) values (?,?)',[req.body.subject, req.body.email], (err, res) =>{
+                    return console.log(err)
+                })
+            }
+        })
+    }
     
 })
 
