@@ -94,6 +94,13 @@ li {
     justify-content: space-around;
     width: 40%;
   }
+  #navigation a {
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  #navigation a:hover {
+    font-size: xx-large;
+  }
   .main {
     display: flex;
     flex-direction: column;
@@ -208,6 +215,19 @@ color: white;
   left: -2.5%;
   z-index: -1;
 }
+#signUpBox::after {
+  content: '';
+  position:absolute;
+  height: 106%;
+  width: 105%;
+  border-radius: 3.3rem;
+  background-image: linear-gradient(to bottom right, lightgreen, yellow);
+  top: -3%;
+  left: -2.5%;
+  z-index: -1;
+}
+
+
 .tutoringBox ul {
   list-style-type: disc;
   margin-top: 0;

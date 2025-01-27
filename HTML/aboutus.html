@@ -12,16 +12,16 @@
   </head>
   <body>
     <header class="headerTab">
-      <a id="home" href="index.html"><em>Brazil to USA</em></a>
+      <a id="home" href=""><em>Brazil to USA</em></a>
       <div id="navigation">
-        <a href="content">content</a>
-        <a href="tutoring">tutoring</a>
-        <a href="about">about us</a>
+        <a id="content" class="translatable" href="content">content</a>
+        <a id="tutoring" class="translatable" href="tutoring">tutoring</a>
+        <a id="aboutus" class="translatable" href="about">about us</a>
       </div>
       <div id="translate">
         <img class="flag" src="usaflag.jpg" alt="English" />
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" id="translateSlider" />
           <span class="slider"></span>
         </label>
 
@@ -30,7 +30,7 @@
     </header>
     <div class="main" id="aboutus">
       <label class="listTitle">By immigrants, for immigrants</label>
-      <p>
+      <p id="aboutPara">
         Hey, I'm Rodrigo. I'm a Brazilian immigrant and high school student who
         moved to the USA in 2023 and I made this website. I hope it may make
         your high school journey a bit easier. If you have any suggestions or
@@ -44,5 +44,6 @@
       >
       <label id="subject">please use the subject "To USA feedback"</label>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

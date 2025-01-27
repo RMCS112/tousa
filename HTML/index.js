@@ -52,6 +52,7 @@ translations = {
     'alink':['book','agendar'],
     'tsignup':['Wanna tutor?','Quer ser tutor?'],
     'slink':['Sign Up','Registre‑se'],
+    'aboutPara':["Hey, I'm Rodrigo. I'm a Brazilian immigrant and high school student who moved to the USA in 2023 and I made this website. I hope it may make your high school journey a bit easier. If you have any suggestions or requests, please contact me.",'Oi, eu sou o Rodrigo. Eu sou um imigrante brasileiro e estudante de ensino médio que se mudou para os Estados Unidos em 2023 e eu fiz esse website. Eu espero que ele possa tornar sua jornada no ensino médio um pouco mais fácil. Se você tem qualquer sugestão ou pedido, por favor me contate.'],
 }
 console.log(translatable)
 slider.onclick = translate
