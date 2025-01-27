@@ -99,7 +99,7 @@ li {
     transition: .3s;
   }
   #navigation a:hover {
-    font-size: xx-large;
+    font-size: small;
   }
   .main {
     display: flex;
@@ -394,11 +394,11 @@ list-style-type: disc;
 
 /* About Us */
 
-#aboutus label {
+#aboutusdiv label {
   padding-bottom: 2%;
 }
 
-#aboutus p {
+#aboutusdiv p {
   font-family: touche-light;
   font-weight: normal;
 }
