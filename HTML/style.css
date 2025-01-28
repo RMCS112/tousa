@@ -96,9 +96,11 @@ li {
   }
 
   #navigation a::after {
+    content: '';
     position: absolute;
     bottom: -2px;
-    height: 1px;
+    height: 1.5px;
+    width: 3px;
     -webkit-transition: .3s;
     transition: .3s;
   }
