@@ -4,18 +4,21 @@ const mysql2 = require('mysql2')
 const app = express()
 
 //Create a Database Connection
-console.log('check1')  
-var con = mysql2.createConnection(process.env.JAWSDB_URL)
-    
-con.connect((err) => {
-    console.log('check')
-    if(err)
-    {
-        console.log('               error               '+err.stack)
-    }else{
-        console.log("CONNECTION SUCCESSFUL!")
-    }
-})
+console.log('check1')
+
+if (process.env.JAWSDB_URL) {
+    var con = mysql2.createConnection(process.env.JAWSDB_URL)
+
+    con.connect((err) => {
+        console.log('check')
+        if(err)
+        {
+            console.log('               error               '+err.stack)
+        }else{
+            console.log("CONNECTION SUCCESSFUL!")
+        }
+    })
+}
 
 // Launch server
 
