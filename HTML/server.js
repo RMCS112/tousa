@@ -41,8 +41,12 @@ app.get('/about', (req,res) => {
     res.sendFile(path.join(__dirname,'aboutus.html'))
     })
 
+app.get('/success', (req,res) => {
+    res.sendFile(path.join(__dirname,'success.html'))
+    })
+
 app.post('/signup', (req,res) => {
-    console.log(Object.keys(req.body))
+    /*
     if (con.status == 'authenticated') {
         con.query('insert into tutors(subjects,email) values (?,?)',[Object.keys(req.body).slice(1).join(), req.body.email], (err, res) =>{
             return console.log(err)
@@ -62,11 +66,11 @@ app.post('/signup', (req,res) => {
         })
     }
     
-    
+    */
+   res.redirect('/success')
 })
 
 app.post('/book', (req,res) => {
-    console.log(Object.keys(req.body))
     if (con.status == 'authenticated') {
         con.query('insert into students(subjects,email) values (?,?)',[req.body.subject, req.body.email], (err, res) =>{
             return console.log(err)
@@ -93,6 +97,3 @@ app.listen(port, () => {
     console.log('Server is listening on port '+port)
     console.log(__dirname + '<-- dirname')
     })
-
-    
-
