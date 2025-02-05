@@ -2,7 +2,8 @@
   "dependencies": {
     "@google-apps/meet": "^0.3.0",
     "express": "^4.21.1",
-    "mysql2": "^3.11.4"
+    "mysql2": "^3.11.4",
+    "pg": "^8.13.1"
   },
   "name": "programs",
   "version": "1.0.0",
